@@ -92,7 +92,7 @@ Nachweis über den erfolgreichen Build-Prozess und die Automatisierung (Green Bu
 
 ## ☁️ Cloud-Deployment
 Das Projekt ist live erreichbar unter:
-[DEIN_CLOUD_LINK_HIER_EINFÜGEN]
+[https://cloud-native-notes.onrender.com](https://cloud-native-notes.onrender.com)
 
 ---
 
