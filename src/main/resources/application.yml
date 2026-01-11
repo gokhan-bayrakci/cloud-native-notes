@@ -1,0 +1,11 @@
+spring:
+  mongodb:
+    uri: ${MONGODB_URI:mongodb://localhost:27017/cnns}
+  thymeleaf:
+    cache: false # Für schnellere Entwicklung
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics # Actuator Endpunkte

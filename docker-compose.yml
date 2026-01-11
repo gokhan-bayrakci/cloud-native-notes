@@ -1,0 +1,22 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      # Hier nutzen wir den Service-Namen "db" als Hostname
+      - MONGODB_URI=mongodb://db:27017/cnns
+    depends_on:
+      - db
+
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    # WICHTIG: Ohne Volumes sind deine Notizen nach einem Neustart weg!
+    volumes:
+      - mongodb_data:/data/db
+
+# Definition des Volumes für dauerhafte Speicherung
+volumes:
+  mongodb_data:
