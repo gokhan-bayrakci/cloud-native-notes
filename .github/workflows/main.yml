@@ -9,13 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up JDK 17
+      
+      - name: Set up JDK 21
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'temurin'
+          cache: maven # Beschleunigt zukünftige Builds
+
       - name: Build with Maven
-        run: mvn clean package
+        run: mvn clean package -DskipTests # -DskipTests hilft, falls keine Mongo-DB in der Pipeline läuft
+
       - name: Docker Build
-        run: docker build -t mein-user/cnns:latest .
-      # Hier folgen Schritte für Docker Login & Push in die Registry
+        run: docker build -t gokhan-bayrakci/cnns:latest .
