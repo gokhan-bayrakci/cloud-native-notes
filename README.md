@@ -102,7 +102,7 @@ Nachweis über den erfolgreichen Build-Prozess und die Automatisierung (Green Bu
 ## ☁️ Cloud-Deployment
 Das Projekt ist live erreichbar unter:
 * [https://cloud-native-notes.onrender.com](https://cloud-native-notes.onrender.com)
-* [hhttps://cloud-native-notes.onrender.com/swagger-ui/index.html](https://cloud-native-notes.onrender.com/swagger-ui/index.html)
+* [https://cloud-native-notes.onrender.com/swagger-ui/index.html](https://cloud-native-notes.onrender.com/swagger-ui/index.html)
 
 
 ---
