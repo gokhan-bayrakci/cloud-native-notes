@@ -44,6 +44,15 @@ Das gesamte System (App + Datenbank) kann dank Docker Compose ohne manuelle Inst
     ```bash
     docker-compose up --build
     ```
+### **B. Lokal ausführen (ohne Docker)**
+Falls Sie die Anwendung direkt über Maven starten möchten:
+**Start-Befehl:**
+    ```bash
+    mvn spring-boot:run -DskipTests
+    ```
+    *Der Parameter `-DskipTests` beschleunigt den Startvorgang und vermeidet Test-Konfigurationsfehler.*
+
+---
 
 3.  **Zugriff:**
     Die Anwendung ist nach dem Start unter [http://localhost:8080](http://localhost:8080) erreichbar.
@@ -93,6 +102,16 @@ Nachweis über den erfolgreichen Build-Prozess und die Automatisierung (Green Bu
 ## ☁️ Cloud-Deployment
 Das Projekt ist live erreichbar unter:
 [https://cloud-native-notes.onrender.com](https://cloud-native-notes.onrender.com)
+
+---
+
+## ☁️ 12-Factor App Compliance
+
+Dieses Projekt folgt den Cloud-Native Best Practices (12-Factor App):
+
+* **III. Config:** Die Konfiguration (z. B. MongoDB-Verbindung) wird strikt von dem Code getrennt und über Umgebungsvariablen (`MONGODB_URI`) verwaltet.
+* **VII. Port Binding:** Die Anwendung ist vollständig eigenständig und exportiert Dienste (HTTP) via Port Binding (Port 8080), ohne auf einen externen Webserver angewiesen zu sein.
+* **X. Dev/Prod Parity:** Durch den Einsatz von Docker und Docker Compose wird sichergestellt, dass die lokale Entwicklungsumgebung so nah wie möglich an der Produktionsumgebung (Render) ist.
 
 ---
 
