@@ -36,7 +36,7 @@ Das gesamte System (App + Datenbank) kann dank Docker Compose ohne manuelle Inst
 
 1.  **Repository klonen:**
     ```bash
-    git clone <DEIN_REPOSITORY_URL>
+    git clone https://github.com/gokhan-bayrakci/cloud-native-notes.git
     cd CNNS
     ```
 
@@ -105,15 +105,6 @@ Das Projekt ist live erreichbar unter:
 
 ---
 
-## ☁️ 12-Factor App Compliance
-
-Dieses Projekt folgt den Cloud-Native Best Practices (12-Factor App):
-
-* **III. Config:** Die Konfiguration (z. B. MongoDB-Verbindung) wird strikt von dem Code getrennt und über Umgebungsvariablen (`MONGODB_URI`) verwaltet.
-* **VII. Port Binding:** Die Anwendung ist vollständig eigenständig und exportiert Dienste (HTTP) via Port Binding (Port 8080), ohne auf einen externen Webserver angewiesen zu sein.
-* **X. Dev/Prod Parity:** Durch den Einsatz von Docker und Docker Compose wird sichergestellt, dass die lokale Entwicklungsumgebung so nah wie möglich an der Produktionsumgebung (Render) ist.
-
----
 
 ## 👥 Projektmitglieder
 * **Gökhan Bayrakci** (@gokhan-bayrakci)
